@@ -28,6 +28,11 @@
     padding: .8rem;    
     margin: 2rem 2.3rem;
     cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+.wrepper .event button:hover{
+    background: rgba(200, 10, 50, 0.3);
 }
 
 .wrepper .event p{
