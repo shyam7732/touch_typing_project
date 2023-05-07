@@ -27,10 +27,14 @@ export function Counter(){
     // };
     return (
         <>
-        <div className="d1"></div>
-            <button onClick = {increment}>Increment</button>
-            <p>{count}</p>
-            <button onClick={decrement}>Decrement</button>
+            <div className="wrepper">
+                <h1>Counter With React.JS</h1>
+                <div className="event">
+                <button onClick={decrement}>Decrement</button>
+                    <p>{count}</p>
+                    <button onClick = {increment}>Increment</button>
+                </div>
+            </div>
         </>
     )
 }
