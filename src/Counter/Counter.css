@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button{
+    background: #faa361;
+    color: #fff;
+    border-radius: 0.5rem;
+    border: 3px solid #fff;
+    padding: 10px 3px;
+    
+}
