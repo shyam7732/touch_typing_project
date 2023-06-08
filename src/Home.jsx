@@ -9,17 +9,25 @@ function Home() {
     const [keyCounted, setKeyCounted] = useState(false)
     const [accuracy, setAccuracy] = useState(0)
 
-    const sentence = [
-        "ladj asfj dlflka sd",
-        "adf jkl asd fjkl",
-        "jlad fsjla sd",
-        "dkfj sadfj kl",
-        "kasd fjk las",
-    ]
+    // const sentence = [
+    //     "ladj asfj dlflka sd",
+    //     "adf jkl asd fjkl",
+    //     "jlad fsjla sd",
+    //     "dkfj sadfj kl",
+    //     "kasd fjk las",
+    // ]
 
+    const sentence = " abcdefghijklmnopqrstuvwxyz ";
+    const sentenceArray = Array.from(sentence);
+    const senLength = sentenceArray.length;
+    let randomIndex = "";
+    
     function getRandomSentence() {
-        const randomIndex = Math.floor(Math.random() * sentence.length)
-        setSentence(sentence[randomIndex])
+      for (let i = 1; i <= 10; i++) {
+        let word = sentenceArray[Math.floor(Math.random() * senLength)];
+        randomIndex += word;
+      }
+      setSentence(randomIndex); // Assuming setSentence is a valid function
     }
 
     useEffect(() => {
@@ -31,7 +39,7 @@ function Home() {
     function hendleKeyCount() {
         if (isCorrect && inputValue.length === rendomSentence.length) {
             setKeyCounted(true)
-            setAccuracy(Math.floor((rendomSentence.length/(keyCount + 1))*100))
+            setAccuracy(Math.floor((rendomSentence.length / (keyCount + 1)) * 100))
         }
         setKeyCount(keyCount + 1);
     }
